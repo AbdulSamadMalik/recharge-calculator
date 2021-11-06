@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script defer type="module" src="/src/main.ts"></script>
+      <title>Recharge Calculator</title>
+   </head>
+   <body>
+      <div class="container">
+         <form class="form">
+            <h1 class="heading-primary">Recharge Calculator</h1>
+            <h4 class="heading-secondary">calculate recharge value</h4>
+            <fieldset class="controller">
+               <div class="form-control">
+                  <label for="days">Cost <span>(₹)</span></label>
+                  <input
+                     required
+                     min="0"
+                     id="cost"
+                     name="cost"
+                     type="number"
+                     aria-label="Cost in Rupees"
+                     placeholder="Example: 555"
+                  />
+               </div>
+               <div class="form-control">
+                  <label for="days">Data <span>(GB)</span></label>
+                  <input
+                     required
+                     min="0"
+                     id="data"
+                     name="data"
+                     type="number"
+                     aria-label="Data in Gigabyte"
+                     placeholder="Example: 2"
+                  />
+               </div>
+               <div class="form-control">
+                  <label for="days">Validity <span>(days)</span></label>
+                  <input
+                     required
+                     min="0"
+                     id="days"
+                     name="days"
+                     type="number"
+                     aria-label="Validity of Recharge"
+                     placeholder="Example: 84"
+                  />
+               </div>
+            </fieldset>
+            <button class="button" type="submit">Calculate</button>
+            <div class="recharge-value">
+               Recharge Value <span id="value-output"> 100% </span>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>

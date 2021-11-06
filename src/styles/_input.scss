@@ -1,0 +1,24 @@
+input {
+   background: var(--input-bg-color);
+   padding: 12px 12px;
+   outline: none;
+   border: 1px solid var(--border-color-primary);
+   caret-color: var(--text-color-primary);
+   color: var(--text-color-primary);
+   font-size: 15px;
+   border-radius: var(--border-radius);
+   caret-color: #fff;
+
+   &:focus {
+      outline: none;
+      border-color: var(--focus-color);
+      box-shadow: 0 0 0 1px var(--text-field-focus-shadow-color);
+   }
+}
+
+input[type='number'] {
+   &::-webkit-inner-spin-button,
+   &::-webkit-inner-spin-button {
+      opacity: 0;
+   }
+}

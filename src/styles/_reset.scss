@@ -1,0 +1,25 @@
+* {
+   margin: 0;
+   padding: 0;
+   outline: none;
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+}
+
+@for $i from 1 through 6 {
+   h#{$i} {
+      font-weight: 400;
+      color: var(--text-color-primary);
+   }
+}
+
+a {
+   text-decoration: none;
+   color: currentColor;
+}
+
+ul,
+ol,
+li {
+   list-style: none;
+}

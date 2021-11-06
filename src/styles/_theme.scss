@@ -1,0 +1,30 @@
+:root {
+   --color-red: #d73a49;
+   --color-blue: #0366d6;
+   --color-purple: #cb7eff;
+   --color-green: #28a745;
+   --color-yellow: #dbab09;
+   --color-orange: #f66a0a;
+
+   --text-color-primary: #ffffff;
+   --bg-color-primary: #24292e;
+   --btn-bg-color: #0366d6;
+   --input-bg-color: #595959;
+   --button-hover-background: #0372ef;
+   --input-bg-color: #1d2125;
+   --border-color-primary: #000000;
+   --text-color-primary: #f0efef;
+   --text-color-secondary: #ccc;
+   --border-radius: 6px;
+   --focus-color: #0366d6;
+   --text-field-focus-shadow-color: rgb(3 102 214 / 25%);
+   --button-focus-border-color: #005cc5;
+   --font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI, Segoe UI Emoji,
+      Segoe UI Symbol;
+}
+
+@each $color in green, blue, red, orange, yellow, purple {
+   .#{'' + $color} {
+      --color: var(--color-#{$color}) !important;
+   }
+}

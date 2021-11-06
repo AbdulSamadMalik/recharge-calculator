@@ -1,0 +1,26 @@
+.button {
+   font-size: 12px;
+   outline: none;
+   background: var(--btn-bg-color);
+   border-radius: var(--border-radius);
+   padding: 6px 10px;
+   cursor: pointer;
+   transition: background 80ms linear;
+   border: 1px solid var(--btn-bg-color);
+   color: var(--text-color-primary);
+   font-family: var(--font-family);
+
+   &:focus {
+      border: 1px solid var(--button-focus-border-color);
+      background-color: var(--button-hover-background);
+      box-shadow: 0 0 0 2px var(--text-field-focus-shadow-color);
+   }
+
+   &:hover:not(:disabled) {
+      background: var(--button-hover-background);
+   }
+
+   &:disabled {
+      opacity: 0.6;
+   }
+}
