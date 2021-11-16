@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "tsec-compile-check": "tsec -p tsconfig.json --noEmit"
   },
   "devDependencies": {
     "sass": "^1.43.4",
+    "tsec": "^0.1.11",
     "typescript": "^4.3.2",
     "vite": "^2.5.2"
   },
