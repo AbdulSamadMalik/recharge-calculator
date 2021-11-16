@@ -1,4 +1,4 @@
-import logger from "../helpers/logger";
+import logger from '../helpers/logger';
 
 export function $<T extends HTMLElement>(selector: string): T {
    return document.querySelector<T>(selector)!;
@@ -12,7 +12,7 @@ export function conditionalAttribute(
    element: HTMLElement,
    condition: boolean,
    name: string,
-   value = ""
+   value = ''
 ) {
    try {
       if (element && element.setAttribute && condition === true) {
