@@ -69,6 +69,7 @@ fromEvent(daysInput, 'input').subscribe((e) => setValue(e, validity$));
 $$<HTMLInputElement>('input').forEach((input) => {
    input.addEventListener('focus', () => input?.select());
    input.addEventListener('contextmenu', (e) => e.preventDefault());
+   input.addEventListener('keydown', (e) => e.key == 'Escape' && input?.blur());
 });
 
 form.addEventListener('submit', (event) => event.preventDefault());

@@ -9,6 +9,7 @@ input {
    border-radius: var(--border-radius);
    caret-color: #fff;
    width: 100%;
+   transition: all 200ms;
 
    &:focus {
       outline: none;
