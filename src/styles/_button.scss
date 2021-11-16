@@ -3,7 +3,7 @@
    outline: none;
    background: var(--btn-bg-color);
    border-radius: var(--border-radius);
-   padding: 6px 10px;
+   padding: 8px 12px;
    cursor: pointer;
    transition: background 80ms linear;
    border: 1px solid var(--btn-bg-color);
@@ -22,5 +22,12 @@
 
    &:disabled {
       opacity: 0.6;
+   }
+}
+
+@media (max-width: 600px) {
+   .button {
+      padding: 12px;
+      font-size: 14px;
    }
 }

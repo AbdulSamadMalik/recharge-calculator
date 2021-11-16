@@ -1,27 +1,10 @@
 // Styles
 @import 'reset';
 @import 'theme';
-@import 'classes';
+@import 'utils';
 
 // Components
 @import 'form';
 @import 'input';
 @import 'button';
-
-html {
-   color-scheme: dark;
-   background-color: var(--bg-color-primary);
-}
-
-body {
-   font-family: var(--font-family);
-   color: var(--text-color-primary);
-}
-
-.container {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   margin-top: 100px;
-}
+@import 'common';

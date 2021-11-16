@@ -1,24 +1,24 @@
 :root {
-   --color-red: #d73a49;
-   --color-blue: #0366d6;
-   --color-purple: #cb7eff;
-   --color-green: #28a745;
-   --color-yellow: #dbab09;
-   --color-orange: #f66a0a;
+   --color-red: rgb(215, 60, 76);
+   --color-blue: rgb(3, 103, 216);
+   --color-purple: rgb(204, 128, 255);
+   --color-green: rgb(41, 168, 71);
+   --color-yellow: rgb(220, 171, 9);
+   --color-orange: rgb(246, 104, 9);
 
-   --text-color-primary: #ffffff;
-   --bg-color-primary: #24292e;
-   --btn-bg-color: #0366d6;
-   --input-bg-color: #595959;
-   --button-hover-background: #0372ef;
-   --input-bg-color: #1d2125;
-   --border-color-primary: #000000;
-   --text-color-primary: #f0efef;
-   --text-color-secondary: #ccc;
    --border-radius: 6px;
-   --focus-color: #0366d6;
-   --text-field-focus-shadow-color: rgb(3 102 214 / 25%);
-   --button-focus-border-color: #005cc5;
+   --text-color-primary: rgb(255, 255, 255);
+   --bg-color-primary: rgb(36, 41, 46);
+   --btn-bg-color: rgb(3, 103, 216);
+   --input-bg-color: rgb(89, 89, 89);
+   --button-hover-background: rgb(2, 112, 237);
+   --input-bg-color: rgb(29, 33, 37);
+   --border-color-primary: rgb(0, 0, 0);
+   --text-color-primary: rgb(240, 239, 239);
+   --text-color-secondary: rgb(204, 204, 204);
+   --focus-color: rgb(3, 103, 216);
+   --text-field-focus-shadow-color: rgba(3, 102, 214, 0.25);
+   --button-focus-border-color: rgb(0, 92, 197);
    --font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI, Segoe UI Emoji,
       Segoe UI Symbol;
 }

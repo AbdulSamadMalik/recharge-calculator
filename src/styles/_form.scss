@@ -3,7 +3,7 @@
    align-items: center;
    justify-content: center;
    flex-direction: column;
-   min-width: 350px;
+   min-width: 300px;
 
    .heading-primary {
       font-weight: 100;
@@ -20,16 +20,20 @@
    }
 
    .controller {
+      width: 100%;
       margin-top: 36px;
       border: none;
    }
 
    .form-control {
       width: 100%;
-      margin-bottom: 12px;
-      display: grid;
-      grid-template-columns: 130px 1fr;
+      margin-bottom: 20px;
+      display: flex;
       align-items: center;
+   }
+
+   .form-label {
+      width: 130px;
    }
 
    .button {
@@ -48,19 +52,54 @@
       border: 1px solid var(--border-color-primary);
       user-select: none;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      overflow: auto;
 
-      span {
+      .block {
          padding: 6px 12px;
          cursor: pointer;
          border-radius: var(--border-radius);
          background-color: var(--bg-color-primary);
          margin-left: 24px;
          border: 1px solid transparent;
-
          color: var(--color) !important;
          border-color: var(--color) !important;
+         margin-left: auto;
+         float: right;
+      }
+   }
+
+   @media (max-width: 600px) {
+      min-width: 200px;
+      max-width: 83%;
+      width: 100%;
+
+      .heading-primary,
+      .heading-secondary {
+         font-weight: 400;
+      }
+
+      .form-control {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+
+      .form-label {
+         margin-bottom: 12px;
+      }
+
+      .recharge-value {
+         margin-top: 8px;
+
+         span:nth-of-type(1) {
+            display: none;
+         }
+      }
+   }
+
+   @media (min-width: 600px) {
+      .github-link {
+         display: none;
       }
    }
 }

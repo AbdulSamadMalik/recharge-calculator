@@ -1,11 +1,11 @@
 import logger from '../helpers/logger';
 
 export function NaN(...args: any[]) {
-   return !args.every(arg => !window.isNaN(arg));
+   return !args.every((arg) => !window.isNaN(arg));
 }
 
 export function trueNo(...args: any[]) {
-   return !args.every(no => !window.isNaN(no) && no <= 0);
+   return !args.every((no) => !window.isNaN(no) && no <= 0);
 }
 
 export function createObjectURL(source: File | Blob | string | null) {
@@ -40,5 +40,5 @@ export function preventAnchorReload(event: MouseEvent) {
  * Returns a promise which resolves after `T` seconds.
  */
 export function asyncTimer(T: number): Promise<void> {
-   return new Promise(resolve => setTimeout(resolve, T));
+   return new Promise((resolve) => setTimeout(resolve, T));
 }

@@ -24,7 +24,7 @@ function setRechargeValue() {
 
    function setOutputClass(className: string) {
       form.className = `form ${className}`;
-      valueOutput.className = `value-output ${className}`;
+      valueOutput.className = `value-output block ${className}`;
    }
 
    const isNaN = NaN(cost, data, validity) || !trueNo(data);

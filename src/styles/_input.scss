@@ -8,6 +8,7 @@ input {
    font-size: 15px;
    border-radius: var(--border-radius);
    caret-color: #fff;
+   width: 100%;
 
    &:focus {
       outline: none;
