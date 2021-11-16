@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      <title>Recharge Calculator</title>
+     <script type="module" crossorigin src="/assets/index.b9b7f8a4.js"></script>
+     <link rel="modulepreload" href="/assets/vendor.7e07baf5.js">
+     <link rel="stylesheet" href="/assets/index.ea3e4c9b.css">
+   </head>
+   <body>
+      <main class="app-root">
+         <div class="container">
+            <form class="form">
+               <h1 class="heading-primary">Recharge Calculator</h1>
+               <h4 class="heading-secondary">
+                  calculate recharge value
+                  <span class="github-link">
+                     &bull;
+                     <a
+                        href="https://github.com/AbdulSamadMalik/recharge-calculator"
+                     >
+                        GitHub
+                     </a>
+                  </span>
+               </h4>
+               <fieldset class="controller">
+                  <div class="form-control">
+                     <label class="form-label" for="days"
+                        >Cost <span>(₹)</span></label
+                     >
+                     <input
+                        required
+                        min="0"
+                        id="cost"
+                        name="cost"
+                        type="number"
+                        aria-label="Cost in Rupees"
+                        placeholder="Example: 555"
+                     />
+                  </div>
+                  <div class="form-control">
+                     <label class="form-label" for="days"
+                        >Data <span>(GB)</span></label
+                     >
+                     <input
+                        required
+                        min="0"
+                        id="data"
+                        name="data"
+                        type="number"
+                        aria-label="Data in Gigabyte"
+                        placeholder="Example: 2"
+                     />
+                  </div>
+                  <div class="form-control">
+                     <label class="form-label" for="days"
+                        >Validity <span>(days)</span></label
+                     >
+                     <input
+                        required
+                        min="0"
+                        id="days"
+                        name="days"
+                        type="number"
+                        aria-label="Validity of Recharge"
+                        placeholder="Example: 84"
+                     />
+                  </div>
+               </fieldset>
+               <button class="button" type="submit">Calculate</button>
+               <div class="recharge-value">
+                  <span>Recharge&nbsp;</span>
+                  <span>Value</span>
+                  <div class="block" id="value-output">100%</div>
+               </div>
+            </form>
+         </div>
+         <a
+            class="fork-button"
+            href="https://github.com/AbdulSamadMalik/recharge-calculator"
+         >
+            <img
+               loading="lazy"
+               width="149"
+               height="149"
+               src="https://github.blog/wp-content/uploads/2008/12/forkme_left_darkblue_121621.png?resize=149%2C149"
+               class="attachment-full size-full"
+               alt="Fork me on GitHub"
+               data-recalc-dims="1"
+            />
+         </a>
+      </main>
+   </body>
+</html>
