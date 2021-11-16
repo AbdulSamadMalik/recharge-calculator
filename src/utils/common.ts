@@ -1,4 +1,4 @@
-import logger from '../helpers/logger';
+import logger from "../helpers/logger";
 
 export function NaN(...args: any[]) {
    return !args.every((arg) => !window.isNaN(arg));
@@ -16,17 +16,17 @@ export function createObjectURL(source: File | Blob | string | null) {
 
    if (source instanceof File || source instanceof Blob) {
       return _createURL(source);
-   } else if ('string' == typeof source) {
-      return _createURL(new Blob([source], { type: 'text/plain' }));
+   } else if ("string" == typeof source) {
+      return _createURL(new Blob([source], { type: "text/plain" }));
    }
 
-   logger.error('Not a file or blob');
+   logger.error("Not a file or blob");
    return _createURL(new Blob([]));
 }
 
 export function prefersDarkTheme() {
    if (!window.matchMedia) return false;
-   return window.matchMedia('(prefers-color-scheme: dark)').matches;
+   return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
 export function preventAnchorReload(event: MouseEvent) {

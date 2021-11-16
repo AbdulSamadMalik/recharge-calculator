@@ -19,12 +19,12 @@
    --focus-color: rgb(3, 103, 216);
    --text-field-focus-shadow-color: rgba(3, 102, 214, 0.25);
    --button-focus-border-color: rgb(0, 92, 197);
-   --font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI, Segoe UI Emoji,
-      Segoe UI Symbol;
+   --font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI,
+      Segoe UI Emoji, Segoe UI Symbol;
 }
 
 @each $color in green, blue, red, orange, yellow, purple {
-   .#{'' + $color} {
+   .#{"" + $color} {
       --color: var(--color-#{$color}) !important;
    }
 }

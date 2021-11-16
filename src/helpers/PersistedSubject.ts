@@ -1,10 +1,10 @@
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from "rxjs";
 
 function getStoredValue<A, B = Object>(
    id: string,
    defaultValue: A,
    object?: B,
-   key?: keyof B,
+   key?: keyof B
 ): A {
    try {
       const stored: any = localStorage.getItem(id);
