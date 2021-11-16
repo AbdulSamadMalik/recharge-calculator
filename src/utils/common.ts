@@ -4,7 +4,7 @@ export function NaN(...args: any[]) {
    return !args.every((arg) => !window.isNaN(arg));
 }
 
-export function trueNo(...args: any[]) {
+export function truthyNo(...args: any[]) {
    return !args.every((no) => !window.isNaN(no) && no <= 0);
 }
 

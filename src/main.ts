@@ -1,17 +1,25 @@
-import {
-   form,
-   costInput,
-   dataInput,
-   daysInput,
-   submitButton,
-   valueBanner,
-   valueOutput,
-   getInputs,
-} from './elements';
 import { fromEvent, merge } from 'rxjs';
-import { $$, conditionalClass, NaN, trueNo } from './utils';
+import { $, $$, conditionalClass, NaN, truthyNo } from './utils';
 import { PersistedSubject } from './helpers/PersistedSubject';
 import './styles/main.scss';
+
+const form = $('form');
+const valueOutput = $('#value-output');
+const valueBanner = $('.recharge-value');
+
+const costInput = $('#cost') as HTMLInputElement;
+const dataInput = $('#data') as HTMLInputElement;
+const daysInput = $('#days') as HTMLInputElement;
+
+const submitButton = $('button.submit') as HTMLButtonElement;
+
+export function getValues() {
+   return {
+      cost: costInput.valueAsNumber,
+      data: dataInput.valueAsNumber,
+      validity: daysInput.valueAsNumber,
+   };
+}
 
 const cost$ = new PersistedSubject('cost', 0, costInput, 'value');
 const data$ = new PersistedSubject('data', 0, dataInput, 'value');
@@ -20,14 +28,14 @@ const validity$ = new PersistedSubject('days', 0, daysInput, 'value');
 merge(cost$, data$, validity$).subscribe(setRechargeValue);
 
 function setRechargeValue() {
-   const { cost, data, validity } = getInputs();
+   const { cost, data, validity } = getValues();
 
    function setOutputClass(className: string) {
       form.className = `form ${className}`;
       valueOutput.className = `value-output block ${className}`;
    }
 
-   const isNaN = NaN(cost, data, validity) || !trueNo(data);
+   const isNaN = NaN(cost, data, validity) || !truthyNo(data);
 
    conditionalClass(valueBanner, isNaN, 'hidden');
    conditionalClass(submitButton, !isNaN, 'hidden');

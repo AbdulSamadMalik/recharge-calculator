@@ -1,4 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
+import logger from './logger';
 
 function getStoredValue<A, B = Object>(
    id: string,
@@ -27,6 +28,10 @@ export class PersistedSubject<A, B = Object> extends BehaviorSubject<A> {
 
    next(value: A) {
       super.next(value);
-      localStorage.setItem(this.id, JSON.stringify({ value }));
+      try {
+         localStorage.setItem(this.id, JSON.stringify({ value }));
+      } catch (error: any) {
+         logger.error(error.message);
+      }
    }
 }
